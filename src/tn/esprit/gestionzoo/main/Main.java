@@ -2,13 +2,6 @@ package tn.esprit.gestionzoo.main;
 
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
-//instruction 21
-import tn.esprit.gestionzoo.entities.Aquatic;
-import  tn.esprit.gestionzoo.entities.Terrestrial;
-import  tn.esprit.gestionzoo.entities.Dolphin;
-import  tn.esprit.gestionzoo.entities.Penguin;
-
-import javax.lang.model.util.SimpleElementVisitor7;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -68,23 +61,6 @@ public class Main {
         tonZoo.addAnimal(katous);
         tonZoo.displayAnimals();
         Zoo superZoo=myZoo.comparerZoo(myZoo,tonZoo);
-
-        //instruction 21
-        Aquatic fish=new Aquatic("fishies","BigFishie",6,false,"ocean");
-        Terrestrial turtle=new Terrestrial("soulahfetet","tirtir",20,false,4);
-        Aquatic dof=new Dolphin("dolfinet","adolf",12,true,"ocean",60);
-        Aquatic batrik=new Penguin("batrikat","batrouk",10,false,"ice",565);
-
-        System.out.println("New Animals added");
-        System.out.println(fish.toString());
-        System.out.println(turtle.toString());
-        System.out.println(dof.toString());
-        System.out.println(batrik.toString());
-
-        //instruction 24
-        fish.swim();
-        batrik.swim();
-        dof.swim();
 
     }
 }
