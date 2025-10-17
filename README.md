@@ -14,5 +14,5 @@ GitHub: @tirtir45
 Acknowledgments
 Professor Ghassen Klai for guidance and instruction
 <div align="center">
-  <sub>Built with ☕ by Rym Ben Hmida | Esprit</sub>
+  <sub>By Rym Ben Hmida | Esprit</sub>
 </div>
