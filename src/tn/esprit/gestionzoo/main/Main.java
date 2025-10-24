@@ -68,20 +68,32 @@ public class Main {
         Zoo superZoo=myZoo.comparerZoo(myZoo,tonZoo);
 
         //instruction 21
-        Aquatic fish=new Aquatic("fishies","BigFishie",6,false,"ocean");
+        //Aquatic fish=new Aquatic("fishies","BigFishie",6,false,"ocean");
         Terrestrial turtle=new Terrestrial("soulahfetet","tirtir",20,false,4);
         Aquatic dof=new Dolphin("dolfinet","adolf",12,true,"ocean",60);
         Aquatic batrik=new Penguin("batrikat","batrouk",10,false,"ice",565);
 
         System.out.println("New Animals added");
-        System.out.println(fish.toString());
+        //System.out.println(fish.toString());
         System.out.println(turtle.toString());
         System.out.println(dof.toString());
         System.out.println(batrik.toString());
 
-        //instruction 24
-        fish.swim();
+        //instruction 24/27
+        //fish.swim();
         batrik.swim();
         dof.swim();
+
+        //instruction 26
+        //myZoo.addAquaticAnimal(fish);
+        myZoo.addAquaticAnimal(batrik);
+        myZoo.addAquaticAnimal(dof);
+
+        //instruction 30
+        myZoo.displayNumberOfAquaticsByType();
+
+        //instruction 31
+        System.out.println(batrik.equals(dof));
+
     }
 }

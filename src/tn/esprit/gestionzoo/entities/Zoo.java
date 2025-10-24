@@ -8,6 +8,9 @@ public class Zoo {
     //instruction 14
     public static final int nbrCages=25;
     private int nbrAnimals;
+    //instruction 25
+    Aquatic[] aquaticAnimals;
+    private int nbAquatic;
 
     //constructeur
     public Zoo(String name, String city, int nbrCages) {
@@ -15,6 +18,9 @@ public class Zoo {
         this.name = name;
         this.city = city;
         this.nbrAnimals = 0;
+        //instruction 25
+        this.aquaticAnimals = new Aquatic[10];
+        this.nbAquatic =0;
     }
     //instruction 18
     //getters
@@ -118,6 +124,36 @@ public class Zoo {
             System.out.println("les zoos ont le meme nombre d'animaux");
             return null;
         }
+    }
+
+    //instruction 26
+    public void addAquaticAnimal(Aquatic aquatic){
+
+        if(nbAquatic<aquaticAnimals.length){
+            aquaticAnimals[nbAquatic] = aquatic;
+            nbAquatic++;
+            System.out.println("ajout avec success");
+        }else{
+            System.out.println("plein");
+        }
+    }
+
+    //instruction 30
+    public void displayNumberOfAquaticsByType(){
+
+        int dof=0;
+        int pen=0;
+
+        for(int i=0;i<aquaticAnimals.length;i++){
+            Aquatic aquatic = aquaticAnimals[i];
+            if(aquatic instanceof Dolphin){
+                dof++;
+            }else if (aquatic instanceof Penguin){
+                pen++;
+            }
+        }
+        System.out.println("Nombre des dauphins:" +dof);
+        System.out.println("Nombre des pengouins:" +pen);
     }
 
 }

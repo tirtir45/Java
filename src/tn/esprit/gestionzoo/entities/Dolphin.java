@@ -24,7 +24,8 @@ public class Dolphin extends Aquatic{
         return super.toString()+" Swimming Speed: "+swimmingSpeed;
     }
 
-    //instruction 24
+    //instruction 24/28
+    @Override
     public void swim(){
         System.out.println("This dolphin is swimming");
     }
