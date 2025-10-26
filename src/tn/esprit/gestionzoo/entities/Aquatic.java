@@ -33,6 +33,9 @@ public abstract class Aquatic extends Animal{
         if(null==obj){
             return false;
         }
+        if(this==obj){
+            return true;
+        }
         if(obj instanceof Aquatic aquatic){
             return getName().equals(aquatic.getName()) && getAge()==aquatic.getAge() && habitat.equals(aquatic.habitat);
         }
