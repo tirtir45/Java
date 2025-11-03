@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.main;
 
+import tn.esprit.ZooFullException.InvalidAgeException;
+import tn.esprit.ZooFullException.ZooFullExpception;
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
 //instruction 21
@@ -14,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
 
         //instruction 5
-        Animal lion=new Animal("Asadet","Asad",18,true);
+        Animal lion=new Animal("Asadet","Asad",-18,true);
         Animal zarafa=new Animal("zizi","zouzo",50,true);
         Animal me3za=new Animal("mooo","meee",10,true);
         Animal bata=new Animal("batout","bata",18,false);
@@ -38,10 +40,10 @@ public class Main {
         System.out.println(lion.toString());
 
         //insctruction 10
-        System.out.println(myZoo.addAnimal(lion));
+        /*System.out.println(myZoo.addAnimal(lion));
         System.out.println(myZoo.addAnimal(zarafa));
         System.out.println(myZoo.addAnimal(me3za));
-        System.out.println(myZoo.addAnimal(bata));
+        System.out.println(myZoo.addAnimal(bata));*/
 
         //instruction 11
         myZoo.displayAnimals();
@@ -59,13 +61,13 @@ public class Main {
         }
 
         //instruction 16
-        tonZoo.addAnimal(kalb);
+        /*tonZoo.addAnimal(kalb);
         tonZoo.addAnimal(zarafa);
         tonZoo.addAnimal(me3za);
         tonZoo.addAnimal(bata);
         tonZoo.addAnimal(katous);
         tonZoo.displayAnimals();
-        Zoo superZoo=myZoo.comparerZoo(myZoo,tonZoo);
+        Zoo superZoo=myZoo.comparerZoo(myZoo,tonZoo);*/
 
         //instruction 21
         //Aquatic fish=new Aquatic("fishies","BigFishie",6,false,"ocean");
@@ -94,6 +96,21 @@ public class Main {
 
         //instruction 31
         System.out.println(batrik.equals(dof));
+
+        //instruction 33 + 34 testing
+        System.out.println("Exceptions section");
+        try {
+            myZoo.addAnimal(lion); //has a negative age
+            myZoo.addAnimal(zarafa);
+            myZoo.addAnimal(me3za);
+            myZoo.addAnimal(bata);
+
+        }catch (ZooFullExpception w){
+            System.out.println(w.getMessage());
+
+        }catch (InvalidAgeException w){
+            System.out.println(w.getMessage());
+        }
 
     }
 }
