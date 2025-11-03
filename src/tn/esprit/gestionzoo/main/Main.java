@@ -1,7 +1,7 @@
 package tn.esprit.gestionzoo.main;
 
-import tn.esprit.ZooFullException.InvalidAgeException;
-import tn.esprit.ZooFullException.ZooFullExpception;
+import tn.esprit.ZooExceptions.InvalidAgeException;
+import tn.esprit.ZooExceptions.ZooFullExpception;
 import tn.esprit.gestionzoo.entities.Animal;
 import tn.esprit.gestionzoo.entities.Zoo;
 //instruction 21

@@ -1,4 +1,4 @@
-package tn.esprit.ZooFullException;
+package tn.esprit.ZooExceptions;
 //instruction 34
 
 public class InvalidAgeException extends Exception {
