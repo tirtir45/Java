@@ -2,13 +2,9 @@ package tn.esprit.gestionzoo.main;
 
 import tn.esprit.ZooExceptions.InvalidAgeException;
 import tn.esprit.ZooExceptions.ZooFullExpception;
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
+import tn.esprit.gestionzoo.entities.*;
 //instruction 21
-import tn.esprit.gestionzoo.entities.Aquatic;
-import  tn.esprit.gestionzoo.entities.Terrestrial;
-import  tn.esprit.gestionzoo.entities.Dolphin;
-import  tn.esprit.gestionzoo.entities.Penguin;
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -71,36 +67,36 @@ public class Main {
 
         //instruction 21
         //Aquatic fish=new Aquatic("fishies","BigFishie",6,false,"ocean");
-        Terrestrial turtle=new Terrestrial("soulahfetet","tirtir",20,false,4);
-        Aquatic dof=new Dolphin("dolfinet","adolf",12,true,"ocean",60);
-        Aquatic batrik=new Penguin("batrikat","batrouk",10,false,"ice",565);
+        //Terrestrial turtle=new Terrestrial("soulahfetet","tirtir",20,false,4);
+        //Aquatic dof=new Dolphin("dolfinet","adolf",12,true,"ocean",60);
+        //Aquatic batrik=new Penguin("batrikat","batrouk",10,false,"ice",565);
 
         System.out.println("New Animals added");
         //System.out.println(fish.toString());
-        System.out.println(turtle.toString());
-        System.out.println(dof.toString());
-        System.out.println(batrik.toString());
+        //System.out.println(turtle.toString());
+        //System.out.println(dof.toString());
+        //System.out.println(batrik.toString());
 
         //instruction 24/27
         //fish.swim();
-        batrik.swim();
-        dof.swim();
+        //batrik.swim();
+        //dof.swim();
 
         //instruction 26
         //myZoo.addAquaticAnimal(fish);
-        myZoo.addAquaticAnimal(batrik);
-        myZoo.addAquaticAnimal(dof);
+        //myZoo.addAquaticAnimal(batrik);
+        //myZoo.addAquaticAnimal(dof);
 
         //instruction 30
         myZoo.displayNumberOfAquaticsByType();
 
         //instruction 31
-        System.out.println(batrik.equals(dof));
+        //System.out.println(batrik.equals(dof));
 
         //instruction 33 + 34 testing
         System.out.println("Exceptions section");
         try {
-            myZoo.addAnimal(lion); //has a negative age
+            myZoo.addAnimal(lion); //has a negative age 
             myZoo.addAnimal(zarafa);
             myZoo.addAnimal(me3za);
             myZoo.addAnimal(bata);
@@ -112,5 +108,13 @@ public class Main {
             System.out.println(w.getMessage());
         }
 
+        //instruction 38
+        System.out.println("testing for aquatic,penguin & terrestrial");
+
+        Penguin penguin=new Penguin("pewpews","pings",5,true,"arctic");
+        Terrestrial raccon= new Terrestrial("racks","rocky",8,true,4);
+
+        penguin.eatMeat(Food.MEAT);
+        raccon.eatPlantandMeat(Food.BOTH);
     }
 }
