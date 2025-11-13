@@ -7,7 +7,7 @@ This project is created for educational purposes as part of Esprit's coursework.
 Contact:
 Rym Ben Hmida
 
-LinkedIn: https://www.linkedin.com/in/rym-bh-9a41a730a
+LinkedIn: https://www.linkedin.com/in/rym-ben-hmida-9a41a730a
 Email: Rym.BenHmida@esprit.tn
 GitHub: @tirtir45
 
