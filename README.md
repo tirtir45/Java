@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦁 Zoo Management System 🐘
+#  Zoo Management System
 
 ### *A Comprehensive Java Learning Journey*
 
