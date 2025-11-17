@@ -1,4 +1,6 @@
 package tn.esprit.gestiondesemps.main;
+import tn.esprit.gesntiondesemps.entities.Departement;
+import tn.esprit.gesntiondesemps.entities.DepartementHashSet;
 import tn.esprit.gestiondesemps.entities.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -31,6 +33,32 @@ public class Main {
         System.out.println("---------------suppression emp---------------");
         societe.supprimerEmploye(e2);
         societe.displayEmploye();
+
+        //Department part
+
+        DepartementHashSet  departements = new DepartementHashSet();
+
+        Departement dep1=new Departement(1,"Web",15);
+        Departement dep2=new Departement(2,"Finance",20);
+        Departement dep3=new Departement(3,"IT",30);
+
+        departements.ajouterDepartement(dep1);
+        departements.ajouterDepartement(dep2);
+        departements.ajouterDepartement(dep3);
+
+        System.out.println("--------------Affichage des departements--------------");
+        departements.displayDepartement();
+
+        System.out.println("---------------Recherche des departements--------------");
+        departements.rechercherDepartement("Web");
+        departements.rechercherDepartement(dep3);
+
+        System.out.println("---------------Tri des departements--------------");
+        System.out.println(departements.trierDepartementById());
+
+        System.out.println("---------------Supprimer departement-----------------");
+        departements.supprimerDepartement(dep1);
+        departements.displayDepartement();
 
     }
 }
