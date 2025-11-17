@@ -96,5 +96,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 - GitHub: "https://github.com/tirtir45"
 - LinkedIn: "https://www.linkedin.com/in/rym-ben-hmida-9a41a730a"
 
+## Instructor
+**Ghassen Klai**
 ---
 *Developed at Esprit - Learning through Prosits* 🎓
