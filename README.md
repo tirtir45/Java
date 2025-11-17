@@ -211,13 +211,6 @@ graph LR
 
 ---
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/tirtir45/Java/issues).
-
----
-
 ## 👩‍💻 Author
 
 <div align="center">
