@@ -1,5 +1,6 @@
-package tn.esprit.gesntiondesemps.entities;
+package gestionemp.entities;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.TreeSet;
 
@@ -45,9 +46,14 @@ public class DepartementHashSet implements IDepartement<Departement>{
 
     @Override
     public TreeSet<Departement> trierDepartementById() {
+
+        //Method 1
+        TreeSet<Departement> sorted= new TreeSet<>(Comparator.comparing(Departement::getId));
+
+        /*Method 2
         TreeSet<Departement> sorted= new TreeSet<>(
                 (d1,d2) -> Integer.compare(d1.getId(), d2.getId()));
-
+        */
         sorted.addAll(departements);
         return sorted;
     }

@@ -1,4 +1,4 @@
-package tn.esprit.gesntiondesemps.entities;
+package gestionemp.entities;
 
 public class Departement {
 
@@ -62,7 +62,7 @@ public class Departement {
 
     @Override
     public String toString() {
-        return "Departement: ID = " + id + ", nomDep = " + nomDep + ", nbEmp = " + nbEmp;
+        return "gestionemp.entities.Departement: ID = " + id + ", nomDep = " + nomDep + ", nbEmp = " + nbEmp;
     }
 
 }

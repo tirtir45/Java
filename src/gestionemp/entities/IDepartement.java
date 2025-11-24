@@ -1,4 +1,5 @@
-package tn.esprit.gesntiondesemps.entities;
+package gestionemp.entities;
+
 import java.util.TreeSet;
 
 public interface IDepartement <T> {

@@ -1,6 +1,7 @@
-package tn.esprit.gestiondesemps.entities;
+package gestionemp.entities;
 
-public class Employe {
+
+public class Employe implements Comparable<Employe> {
     private int id;
     private String nom;
     private String prenom;
@@ -81,6 +82,16 @@ public class Employe {
     @Override
     public String toString() {
         return "Employé: id: " +id + "nom: " +nom + "prenom: " +prenom + "nom_dep: " +nom_dep + "grade: " +grade;
+    }
+
+    @Override
+    public int compareTo(Employe other) {
+        return Integer.compare(this.id, other.id);
+    }
+
+    @Override
+    public int hashCode(){
+        return Integer.hashCode(id);
     }
 
 

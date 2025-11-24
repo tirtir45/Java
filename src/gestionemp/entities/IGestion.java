@@ -1,4 +1,4 @@
-package tn.esprit.gestiondesemps.entities;
+package gestionemp.entities;
 
 public interface IGestion <T> {
 

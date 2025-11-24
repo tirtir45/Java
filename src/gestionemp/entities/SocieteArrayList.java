@@ -1,8 +1,6 @@
-package tn.esprit.gestiondesemps.entities;
+package gestionemp.entities;
 
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
