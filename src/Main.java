@@ -1,7 +1,11 @@
-import gestionemp.entities.*;
+import gestionemp.entities.*;   // Employe, Departement, etc.
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -81,5 +85,39 @@ public class Main {
         for (Map.Entry<Employe, Departement> entry : mapTriee.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
+
+        //prosit 12
+
+        List<Etudiant> students = new ArrayList<>();
+        students.add(new Etudiant(4785,"Rym1",20));
+        students.add(new Etudiant(9856,"Yahya",22));
+        students.add(new Etudiant(4613, "Ahmed",23));
+
+        Management mng = new StudentManagement();
+
+        System.out.println("------------displayStudents------------");
+        mng.displayStudents(students, System.out::println);
+
+        System.out.println("------------displayStudentByFilter------------");
+        mng.displayStudentByFilter(
+                students,
+                s -> s.getId() > 10,
+                System.out::println
+        );
+
+        String names = mng.returnStudentsName(students, Etudiant::getNom);
+        System.out.println("Names: " + names);
+
+        Etudiant e = mng.createStudent(() -> new Etudiant(9968, "foulena",25));
+        System.out.println("Created: " + e);
+
+        List<Etudiant> sorted = mng.sortStudentsById(
+                students,
+                Comparator.comparingInt(Etudiant::getId)
+        );
+        System.out.println("Sorted: " + sorted);
+
+        Stream<Etudiant> stream = mng.convertToSteam(students);
+        stream.forEach(s -> System.out.println("From stream: " + s));
     }
 }
